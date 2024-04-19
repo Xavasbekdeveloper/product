@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repeat</title>
+
+    <link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+<body>
+
+    <main class="main">
+        <section class="products container">
+            <h1 class="products__title">Products</h1>
+            <div class="products__header">
+                <button role="button" class="button-name products__add-product">Add Product</button>
+            </div>
+
+            <div class="products__cards">
+            </div>
+        </section>
+
+        <section class="modal">
+
+            <form class="form">
+                <div class="form__box">
+                    <div class="input-group">
+                        <input name="name" class="input input__name" placeholder="Enter Product Name" required=""
+                            type="text">
+                    </div>
+                    <div class="input-group">
+                        <input name="quantity" class="input input__quantity" placeholder="Enter Quantity" required=""
+                            type="number">
+                    </div>
+                    <div class="input-group">
+                        <input name="img" class="input input__img" placeholder="Enter URL" required="Enter URL"
+                            type="text">
+                    </div>
+                    <div class="input-group">
+                        <select class="input input__select" name="unit" id="">
+                            <option selected disabled value="">Change unit</option>
+                            <option value="kg">KG</option>
+                            <option value="litr">LITR</option>
+                            <option value="dona">DONA</option>
+                            <option value="gramm">GRAMM</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <input name="price" class="input input__price" placeholder="Enter Product Price" required=""
+                        type="text">
+                </div>
+
+                <div class="form__btns">
+                    <button type="button" class="button-name products__close">Close</button>
+                    <button type="submit" role="button" class="button-name products__add">Add</button>
+                </div>
+            </form>
+
+        </section>
+    </main>
+
+    <script type="module" src="./js/main.js"></script>
+</body>
+
+</html>
