@@ -67,18 +67,18 @@ function mapProducts(productData) {
         let card = document.createElement("div")
         card.classList.add('products__card')
         card.innerHTML = `
-            <div class="products__card__img">
-                <img src="${product.img}" alt="${product.img} img">
+        <div class="products__card__img">
+        <img src="${product.img}" alt="${product.img} img">
             </div>
 
             <div class="products__card__info">
-                <h2 class="products__card__title">
-                    Name: ${product.name}
-                </h2>
-                <h2 class="products__card__desc">Unit: ${product.unit}</h2>
+            <h2 class="products__card__title">
+            Name: ${product.name}
+            </h2>
+            <h2 class="products__card__desc">Unit: ${product.unit}</h2>
                 <p class="products__card__desc">Quantity: ${product.quantity}</p>
                 <p class="products__card__desc">Price: ${product.price} $</p>
-                <button class="delete__btn" data-id="${product.id}" name="delete">Delete</button>
+                <button class="delete__btn" data-id="${Product}" name="delete">Delete</button>
 
                 </div>
         `
@@ -126,6 +126,7 @@ cards.addEventListener('click', e => {
     if (e.target.name === "delete") {
         deleteProduct(e.target.dataset.id)
     }
+    localStorage.setItem(PRODUCTDATA, JSON.stringify(PRODUCTS))
 })
 
 console.log(PRODUCTS);
