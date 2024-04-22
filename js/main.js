@@ -124,7 +124,7 @@ const deleteProduct = (id) => {
 
 cards.addEventListener('click', e => {
     if (e.target.name === "delete") {
-        confirm("Are you sure you want to delete")
+        // confirm("Are you sure want to delete")
         deleteProduct(e.target.dataset.id)
     }
     localStorage.setItem(PRODUCTDATA, JSON.stringify(PRODUCTS))
